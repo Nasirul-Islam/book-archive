@@ -12,7 +12,7 @@ const loadBooks = () => {
         showBooks.classList.add('d-none')
     }
     else {
-        fetch(`http://openlibrary.org/search.json?q=${inputValue}`)
+        fetch(`https://openlibrary.org/search.json?q=${inputValue}`)
             .then(res => res.json())
             .then(data => displayBooks(data.docs))
         emptyString.classList.add('d-none')
