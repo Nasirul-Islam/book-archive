@@ -1,8 +1,8 @@
 // load API
 const loadBooks = () => {
     const inputField = document.getElementById('inputField');
-    // const booksBody = document.getElementById('booksBody')
-    // booksBody.textContent = '';
+    const defaultMes = document.getElementById('defaultMes')
+    defaultMes.classList.add('d-none')
     const inputValue = inputField.value;
     inputField.value = '';
     const emptyString = document.getElementById('emptyString')
