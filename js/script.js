@@ -50,9 +50,9 @@ const displayBooks = books => {
                     <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4 class="card-title fw-bold">Title: ${book.title}</h4>
-                    <h5>Author: ${book.author_name[0] ? book.author_name[0] : ''}</h5>
+                    <h5>Author: ${book.author_name?.[0]}</h5>
                     <h5>First publish: ${book.first_publish_year}</h5>
-                    <h5>Publisher: ${book.publisher[0] ? book.publisher[0] : ''}</h5>
+                    <h5>Publisher: ${book.publisher?.[0]}</h5>
                 </div>
             </div>
         `;
