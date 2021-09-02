@@ -12,21 +12,31 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="">
         <section class="">
-            <div>
-                <h1>Our Books</h1>
-            </div>
-            <!-- Search Field section -->
-            <div class="input-group mb-3 w-50">
-                <input id="inputField" type="text" class="form-control" placeholder="Search Books"
-                    aria-label="Search Books" aria-describedby="button-addon2">
-                <button onclick="loadBooks()" class="btn btn-outline-secondary" type="button"
-                    id="button-addon2">Button</button>
-            </div>
+            <!-- Navbar -->
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand">Our Books</a>
+                    <form class="d-flex">
+                        <input id="inputField" class="form-control me-2" type="search" placeholder="Search Books"
+                            aria-label="Search Books">
+                        <button onclick="loadBooks()" class="btn text-light border border-light btn-outline-success"
+                            type="button">Search</button>
+                    </form>
+                </div>
+            </nav>
         </section>
         <!-- Show Books section -->
-        <section>
+        <section class="container">
+            <!-- Search result count -->
+            <div id="resultCount">
+
+            </div>
+            <!-- Error Handle -->
+            <div id="emptyString" class="d-none">
+                <h2 class="text-danger text-center">Please type books name</h2>
+            </div>
             <!-- Books will show here -->
             <div id="showBooks" class="row row-cols-1 row-cols-md-3 g-4">
 
